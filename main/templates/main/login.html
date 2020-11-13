@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load socialaccount %}
+
+{% block body %}
+<!--<html>-->
+<!--  <head>-->
+<!--    <title>Google Registration</title>-->
+<!--  </head>-->
+<!--  <body>-->
+<div class="container">
+    <h1>Lisa</h1>
+    Liver surgery analyser
+    <ol>
+        <li>Upload H&E Stained Image</li>
+        <li>Run the analysis</li>
+        <li>Get the score</li>
+    </ol>
+    {% if user.is_authenticated %}
+<!--    <p>Welcome, {{ user.username }} !</p>-->
+    <a class="btn btn-primary" href="{% url 'index' %}">Go to the application</a>
+
+
+    {% else %}
+    <a class="btn btn-primary" href="{% provider_login_url 'google' %}?next={% url 'index' %}">Login with Google</a>
+    {% endif %}
+
+    <h2 class="pt-5">High-quality liver tissue scaffold for tissue engineering</h2>
+    <div class="container-xl">
+        <img src="{% static 'main/repopulation_of_decellularized_pig_scaffolds.png' %}" alt="Images modified from V. Liška, V. Moulisová, R. Pálek, J. Rosendorf, L. Červenková, L. Bolek, V. Třeška (2019): Repopulation of decellularized pig scaffolds: Promising approach for liver tissue engineering, Rozhl Chir 98(10) (2019) 388-393.
+" style="width:100%">
+        <div class="caption">
+            <p>
+                Images modified from V. Liška, V. Moulisová, R. Pálek, J. Rosendorf, L. Červenková, L. Bolek, V. Třeška (2019): Repopulation of decellularized pig scaffolds: Promising approach for liver tissue engineering, Rozhl Chir 98(10) (2019) 388-393.
+            </p>
+        </div>
+    </div>
+</div>
+<!--    <h2>Team</h2>-->
+
+{% endblock %}
+<!--  </body>-->
+<!--</html>-->

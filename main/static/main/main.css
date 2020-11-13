@@ -1,0 +1,92 @@
+img.cellzoom {
+  max-width:100%;
+  max-height:100%;
+  width:90%;
+}
+#previewimg {
+  /* width:100%; */
+}
+/*
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+*/
+/*
+div.container-fluid {
+  background-color: yellow;
+}
+*/
+.table td {
+    text-align: right
+}
+#scaffanlogo {
+    width:50px;
+}
+
+#appbody {
+    opacity:;
+}
+#backgroundbody {
+    z-index: 5;
+}
+div.container-xl {
+    max-width:1400px;
+}
+
+/* to make spaces in card-deck same as they are in card-columns */
+.card-deck .card {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.card-deck {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+#backgroundbody::before {
+    z-index: -1;
+    background: url("/static/main/logo_fav.png"), url("/static/main/logo_lfp.png");
+    background-position: right bottom, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    opacity: 0.5;
+}
+
+
+#myDiv {
+    margin-top:20px;
+    z-index: 5;
+  /*
+  position: relative;
+  height: 250px;
+  width: 300px;
+  color: #000;
+  font-size: 400%;
+  padding: 20px;
+  */
+}
+
+#myDiv::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("/static/main/logo_fav.png"), url("/static/main/logo_lfp.png");
+    background-position: right bottom, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px 100px, 100px 100px;
+    opacity: .3;
+}
+
+
+.badge-pill.badge-light {
+    border: 1px solid #999;
+    border-color: @grayDark;
+}
