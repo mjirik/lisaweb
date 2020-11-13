@@ -1,0 +1,8 @@
+python>=3.8.0
+django
+io3d
+django-allauth
+pandas
+seaborn
+matplotlib
+# tensorflow # should be installed with pip
